@@ -2,16 +2,48 @@
 @import 'config/medias.scss';
 @import 'blocs/newParty.scss';
 
+$background: #E8EBF4;
+$accent-color: #7784B8;
+$secondary-color: #8391C8;
+
 body {
   padding: 1rem;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $background;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h1 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  color: $accent-color;
+  font-weight: bold;
 }
 
 h2 {
   font-size: 1.6rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  color: $secondary-color;
+}
+
+h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+button {
+  outline: none;
+  font-size: 18px;
+  padding: .5rem;
+  margin-bottom: 1rem;
+  background: $accent-color;
+  color: white;
+  text-transform: uppercase;
 }

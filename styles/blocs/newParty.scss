@@ -1,18 +1,25 @@
-.newParty__fields {
-  margin-bottom: 1em;
+.newParty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 2rem;
 
-  @include medium {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    grid-gap: 5px;
-    max-width: 500px;
-  }
-
-  label {
-    display: block;
+  &__fields {
+    margin-bottom: 1em;
 
     @include medium {
-      place-self: center end;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      grid-gap: 5px;
+      max-width: 500px;
+    }
+  
+    label {
+      display: block;
+  
+      @include medium {
+        place-self: center end;
+      }
     }
   }
 }

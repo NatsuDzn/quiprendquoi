@@ -4,13 +4,14 @@ h2= party.name
 h3 Créé par #{party.author}
 label(for="url") Partagez l'événement
 input(id="url" value=`${url}` data-clipboard=`${url}` data-share-url=`${url}` data-share-title=`${party.name}` 
-      data-share-text=`${party.author} vous invite a rejoindre l'événement ${party.name}`) 
-input(type="text" id="url" value=`${url}`)
+      data-share-text=`${party.author} vous invite a rejoindre l'événement ${party.name}`)
 h3 Ajouter un item
-form(method="post" action=`/party/${party._id}/items`)
+form(method="post" action=`/party/${party._id}/items`).newParty
   div
     label(for="name") Nom de l'item
     input(type="text" id="name" name="name" required placeholder="Raclette")
+  div
+  div
     label(for="user") Nom de la personne qui le ramène
     input(type="text" id="user" name="user" required placeholder="David")
   button(type="submit") Créer
