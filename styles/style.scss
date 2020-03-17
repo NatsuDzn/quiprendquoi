@@ -1,9 +1,17 @@
 @import 'vendors/reset.scss';
+@import 'config/medias.scss';
+@import 'blocs/newParty.scss';
 
-form {
-  border: 1px solid blue;
+body {
+  padding: 1rem;
+}
 
-  div {
-    border: 1px solid red;
-  }
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
 }
