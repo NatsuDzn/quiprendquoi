@@ -5,6 +5,7 @@
 $background: #E8EBF4;
 $accent-color: #7784B8;
 $secondary-color: #8391C8;
+$hover-color: #82589F;
 
 body {
   padding: 1rem;
@@ -40,10 +41,15 @@ h3 {
 
 button {
   outline: none;
+  border-radius: 5px;
   font-size: 18px;
   padding: .5rem;
-  margin-bottom: 1rem;
   background: $accent-color;
   color: white;
   text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    background: darken($accent-color, 10%);
+  }
 }
