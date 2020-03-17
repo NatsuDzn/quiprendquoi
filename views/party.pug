@@ -3,7 +3,7 @@ h1 Qui prend quoi ?
 h2= party.name
 h3 Créé par #{party.author}
 label(for="url") Partagez l'événement
-input(id="url" value=`${url}`) 
+input(id="url" value=`${url}` data-clipboard=`${url}`) 
 input(type="text" id="url" value=`${url}`)
 h3 Ajouter un item
 form(method="post" action=`/party/${party._id}/items`)
