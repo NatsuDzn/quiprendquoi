@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Qui prend quoi - Hors ligne</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
+    <span style="font-size: 128px;">💀</span>
     <h1>Oops !</h1>
     <h2>Vous êtes hors ligne</h2>
+
+    <h3>Lien des parties disponible:</h3>
 
     <script>
       caches.open('parties').then((cache) =>
@@ -28,3 +32,13 @@
     </script>
   </body>
 </html>
+
+<style>
+  span {
+    font-size: 128px;
+  }
+
+  h3 {
+    margin-bottom: 1rem;
+  }
+</style>
