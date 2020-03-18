@@ -1,23 +1,33 @@
 include ../partials/header.pug
-h1 Qui prend quoi ?
+a(href='/')
+  h1 Qui prend quoi ? 🎉
 h2= party.name
 h3 Créé par #{party.author}
-label(for="url") Partagez l'événement
-input(id="url" value=`${url}` data-clipboard=`${url}` data-share-url=`${url}` data-share-title=`${party.name}` 
-      data-share-text=`${party.author} vous invite a rejoindre l'événement ${party.name}`)
-h3 Ajouter un item
-form(method="post" action=`/party/${party._id}/items`).newParty
-  div
-    label(for="name") Nom de l'item
-    input(type="text" id="name" name="name" required placeholder="Raclette")
-  div
-  div
-    label(for="user") Nom de la personne qui le ramène
-    input(type="text" id="user" name="user" required placeholder="David")
-  button(type="submit") Créer
-div.newParty__items
-  each item in party.items
+section
+  div.newParty__share
+    label(for="url") Partagez l'événement
+    input(id="url" value=`${url}` data-clipboard=`${url}` data-share-url=`${url}` data-share-title=`${party.name}` 
+          data-share-text=`${party.author} vous invite a rejoindre l'événement ${party.name}`)
+  h3 Ajouter un item
+  form(method="post" action=`/party/${party._id}/items`).newParty
     div
-      p #{item.user} - #{item.name}
-      form(method="post" action=`/party/${party._id}/items/${item._id}?_method=DELETE`)
-        button(type="submit") Supprimer l'item
+      label(for="name") Nom de l'item
+      input(type="text" id="name" name="name" required placeholder="Raclette")
+    div
+    div
+      label(for="user") Nom de la personne qui le ramène
+      input(type="text" id="user" name="user" required placeholder="David")
+    button(type="submit") Créer
+  h3 Liste des items
+
+  if(list)
+  div.newParty__items
+    each item in party.items
+      div
+        p #{item.user} - #{item.name}
+        form(method="post" action=`/party/${party._id}/items/${item._id}?_method=DELETE`)
+          button(type="submit") Supprimer l'item
+    else 
+      p Pas d'items pour cette événement pour le moment
+
+//- include ../partials/footer.pug

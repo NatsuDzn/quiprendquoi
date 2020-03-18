@@ -1,8 +1,23 @@
 .newParty {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 0 0 2rem;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: .75rem;
+
+  &__share {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    width: 600px;
+
+    @media screen and (max-width: 675px) { // To change
+      flex-direction: column;
+      width: auto;
+      height: 200px;
+    }
+  }
 
   &__fields {
     margin-bottom: 1em;
@@ -13,10 +28,10 @@
       grid-gap: 5px;
       max-width: 500px;
     }
-  
+
     label {
       display: block;
-  
+
       @include medium {
         place-self: center end;
       }
@@ -24,17 +39,41 @@
   }
 
   &__items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: white;
     border-radius: 10px;
     padding: 1rem;
-    margin:0 0 2rem;
+    margin: 0 0 5rem;
     box-shadow: 0px 4px 35px rgba(179, 179, 179, 0.25);
+
+    div {
+      margin: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
 
     p {
       margin-bottom: .5rem;
+      width: 375px;
+      text-align: center;
     }
   }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 375px) { 
+      flex-direction: column;
+    }
+  }
+}
+
+input {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  resize: both;
 }
