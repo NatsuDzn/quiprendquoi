@@ -94,6 +94,8 @@ section {
 }
 
 footer {
+  position: fixed;
+  bottom: 0px;
   display: flex;
   justify-content: center;
   background: $accent-color;
@@ -101,4 +103,5 @@ footer {
   padding: 1rem;
   width: 100vw;
   font-size: 14px;
+  margin-top: 1rem;
 }

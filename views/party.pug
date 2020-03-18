@@ -10,26 +10,27 @@ section
     label(for="url") Partagez l'événement
     input(id="url" value=`${url}` data-clipboard=`${url}` data-share-url=`${url}` data-share-title=`${party.name}` 
           data-share-text=`${party.author} vous invite a rejoindre l'événement ${party.name}`)
-  h3 Ajouter un item
-  form(method="post" action=`/party/${party._id}/items`).newParty
-    div
-      label(for="name") Nom de l'item
-      input(type="text" id="name" name="name" required placeholder="Raclette")
-    div
-    div
-      label(for="user") Nom de la personne qui le ramène
-      input(type="text" id="user" name="user" required placeholder="David")
-    button(type="submit") Créer
-  h3 Liste des items
+  div.newParty
+    h3 Ajouter un item
+    form(method="post" action=`/party/${party._id}/items`)
+      div.newParty__input
+        label(for="name") Nom de l'item
+        input(type="text" id="name" name="name" required placeholder="Raclette")
+      div.newParty__input
+        label(for="user") Utilisateur
+        input(type="text" id="user" name="user" required placeholder="David")
+      button(type="submit").test Créer
+     
+  div.newParty
+    h3 Liste des items
+    if(list)
+    div.newParty__items
+      each item in party.items
+        div.newParty__items--container
+          p #{item.user} - #{item.name}
+          form(method="post" action=`/party/${party._id}/items/${item._id}?_method=DELETE`)
+            button(type="submit") Supprimer l'item
+      else 
+        p Pas d'items pour cette événement pour le moment
 
-  if(list)
-  div.newParty__items
-    each item in party.items
-      div
-        p #{item.user} - #{item.name}
-        form(method="post" action=`/party/${party._id}/items/${item._id}?_method=DELETE`)
-          button(type="submit") Supprimer l'item
-    else 
-      p Pas d'items pour cette événement pour le moment
-
-//- include ../partials/footer.pug
+include ../partials/footer.pug
