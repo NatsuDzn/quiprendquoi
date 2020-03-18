@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
-
+app.use(express.static('pwa'));
 
 
 app.get('/', function (req, res) {
