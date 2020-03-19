@@ -1,11 +1,15 @@
+doctype html
 html(lang="fr")
   head
     title= title
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="description", content="A school project about PWA")
+    meta(name="theme-color", content="#7784B8")
     link(rel="stylesheet" href="/style.css")
     link(rel="manifest" href="/manifest.json")
+    link(rel="apple-touch-icon" sizes="192x192" href="../pwa/images/icon-192x192.png")
     script(src="/script.js" async)
     script.
       if (navigator.serviceWorker) {

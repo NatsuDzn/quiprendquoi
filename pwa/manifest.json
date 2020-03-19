@@ -3,7 +3,7 @@
   "short_name": "QPQ",
   "theme_color": "#7784B8",
   "background_color": "#e8ebf4",
-  "display": "browser",
+  "display": "minimal-ui",
   "Scope": "/",
   "start_url": "/",
   "icons": [
