@@ -16,7 +16,7 @@
       margin: 5px;
     }
 
-    @media screen and (max-width: 675px) { 
+    @media screen and (max-width: 675px) {
       flex-direction: column;
       width: auto;
       height: 200px;
@@ -63,12 +63,14 @@
 
     p {
       margin-bottom: .5rem;
-      width: auto;
+      max-width: 500px;
+      text-overflow: ellipsis;
+      overflow: hidden;
       text-align: center;
     }
 
     &:hover {
-      box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+      box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .02);
     }
   }
 

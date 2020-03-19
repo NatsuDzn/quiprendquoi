@@ -22,15 +22,15 @@ section
       button(type="submit").test Créer
      
   .newParty
-    h3 Liste des items 
+    h3#count
     if(list)
     .newParty__items
       each item in party.items
         .newParty__items--container
           p #{item.user} - #{item.name} 
           form(method="post" action=`/party/${party._id}/items/${item._id}?_method=DELETE`)
-            button(type="submit") Supprimer l'item
+            button(type="submit") ❌ Supprimer l'item
       else 
-        p Pas d'items pour cette événement pour le moment
+        p Aucun items pour cette événement pour le moment
 
 include ../partials/footer.pug
