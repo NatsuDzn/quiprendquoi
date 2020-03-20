@@ -1,18 +1,19 @@
 include ../partials/header.pug
-a(href='/')
-  h1 Qui prend quoi ? 🎉
-h2 Créer un événement
-section
-  form(method="post" action="/party").newParty
-    .newParty__fields
-      label(for="name") Nom de l'événement
-      input(name="name" id="name" required minlength="3" placeholder="Nouvel an")
-    .newParty__fields
-      label(for="author") Votre prénom
-      input(name="author" id="author" required minlength="3" placeholder="Nathanael")
-    .newParty__fields
-      label(for="date") Date de l'événement
-      input(name="date" id="date" type="date" placeholder="DD-MM-YYYY")
-    button(type="submit") Créer
+.container
+  a(href='/')
+    h1 Qui prend quoi ? 🎉
+  h2 Créer un événement
+  section
+    form(method="post" action="/party").newParty
+      .newParty__fields
+        label(for="name") Nom de l'événement
+        input(name="name" id="name" required minlength="3" placeholder="Nouvel an")
+      .newParty__fields
+        label(for="author") Votre prénom
+        input(name="author" id="author" required minlength="3" placeholder="Nathanael")
+      .newParty__fields
+        label(for="date") Date de l'événement
+        input(name="date" id="date" type="date" placeholder="DD-MM-YYYY")
+      button(type="submit") Créer
 
 include ../partials/footer.pug

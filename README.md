@@ -1,27 +1,36 @@
-<h3 align="center">Qui prend quoi ? - QPQ</h3>
+# Qui prend quoi
 
----
+## Installation
 
-<p align="center"> School project - PWA
-    <br> 
-</p>
+`npm install`
 
-## 🏁 Setup <a name = "getting_started"></a>
+`npm run start`
 
-### Prerequisites
+Ouvrir `localhost:3000`
 
-You need
+## Améliorations apportées
 
-```
-node-js (npm)
-```
+- Listes des items sur la page de la party/event (`app.js`, `party.pug`)
+- Suppresion des items sur la page de la party/event (`app.js`, `party.pug`)
+- Nombre des items dans la party/event (`parties.js`, `party.pug`)
+- Modification du nom et de l'auteur de la party/event (`app.js`, `party.pug`, `editParty.pug`)
+- Amélioration du design : offline page,card,buttons etc... (`style.scss`)
 
-### Installing
+<!-- ## Article personnel
 
-Clone and cd into the repository and run `npm install`
+### Sujet : à completer
 
-### Development mode
+Le sujet peut être :
 
-```npm run start```
+- une web api explorée (même en partie)
+- un outil ou technique lié à la performance, l'amélioration progressive, l'accessibilité
+- une technique liée aux PWA ou aux service workers
+- un outil de développement (package npm, devtool...)
 
-Open `localhost:3000`
+Ce n'est pas une liste exhaustive, demandez en cas de doute.
+
+Plan en cas de panne d'inspiration :
+
+- Description du sujet choisi (sa définition, son but...)
+- Exemple d'utitlisation ou d'implémentation (bout de code si pertinent, capture d'écran...)
+- Conclusion : avantages, inconvénients et cas d'usage -->

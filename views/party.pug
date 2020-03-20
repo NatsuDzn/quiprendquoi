@@ -1,10 +1,11 @@
 include ../partials/header.pug
 script.
   party = !{JSON.stringify(party)}
+  
 a(href='/')
   h1 Qui prend quoi ? 🎉
-h2= party.name
-h3 Créé par #{party.author}
+h2 🏷️ #{party.name}
+h3 🥳 Créé par #{party.author}
 form.newParty(method="get" action=`/party/${party._id}/edit`)
   button(type="submit") ✏️Modifier la party
 section

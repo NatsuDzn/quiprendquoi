@@ -1,10 +1,22 @@
+.container {
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  animation: bounceIn .75s ease-in-out;
+  transition: all .5s ease;
+
+  &:hover {
+    box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .02);
+  }
+}
+
 .newParty {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   flex-shrink: 1;
   padding: .75rem;
-  animation: bounceIn .75s ease-in-out;
 
   &__share {
     display: flex;
