@@ -39,7 +39,30 @@ app.get('/party/:id', (req, res) => {
       res.render('party', {
         party: data,
         title: data.name,
+        partyId: req.param.id,
         url: `${process.env.FRONT_URL}:${process.env.PORT}/party/${data._id}`,
+      }),
+    )
+    .catch((err) => console.log(err));
+});
+
+app.patch("/party/:id", function(req, res) {
+  axios
+    .patch(`${process.env.API_URL}/party/${req.params.id}`, req.body)
+    .then(() => res.redirect(`/party/${req.params.id}`))
+    .catch(err => res.send(err));
+});
+
+app.get('/party/:id/edit/', (req, res) => {
+  axios
+    .get(`${process.env.API_URL}/party/${req.params.id}`)
+    .then(({
+        data
+      }) =>
+      res.render('editParty', {
+        party: data,
+        title: data.name,
+        partyId: req.param.id
       }),
     )
     .catch((err) => console.log(err));

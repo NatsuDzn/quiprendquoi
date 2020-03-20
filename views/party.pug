@@ -5,6 +5,8 @@ a(href='/')
   h1 Qui prend quoi ? 🎉
 h2= party.name
 h3 Créé par #{party.author}
+form.newParty(method="get" action=`/party/${party._id}/edit`)
+  button(type="submit") ✏️Modifier la party
 section
   .newParty__share
     label(for="url") Partagez l'événement
@@ -28,8 +30,9 @@ section
       each item in party.items
         .newParty__items--container
           p #{item.user} - #{item.name} 
-          form(method="post" action=`/party/${party._id}/items/${item._id}?_method=DELETE`)
-            button(type="submit") ❌ Supprimer l'item
+          .newParty__items--form
+            form(method="post" action=`/party/${party._id}/items/${item._id}?_method=DELETE`)
+              button(type="submit") ❌ Supprimer l'item
       else 
         p Aucun items pour cette événement pour le moment
 

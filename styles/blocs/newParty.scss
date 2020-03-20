@@ -61,6 +61,17 @@
       flex-direction: column !important;
     }
 
+    &--form {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+
+      form {
+        margin: 5px;
+      }
+    }
+
     p {
       margin-bottom: .5rem;
       max-width: 500px;
