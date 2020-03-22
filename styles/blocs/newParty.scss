@@ -1,8 +1,8 @@
 .container {
-  text-align: center;
   background: white;
   padding: 2rem;
   border-radius: 15px;
+  text-align: center;
   animation: bounceIn .75s ease-in-out;
   transition: all .5s ease;
 
@@ -29,17 +29,17 @@
     }
 
     @media screen and (max-width: 675px) {
-      flex-direction: column;
       width: auto;
       height: 200px;
+      flex-direction: column;
     }
   }
 
   &__fields {
-    margin-bottom: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 1em;
 
     @include medium {
       display: grid;
@@ -58,19 +58,25 @@
   }
 
   &__items {
-    background: white;
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
     padding: 1rem;
     margin: 0 0 5rem;
-    display: flex;
-    flex-direction: column;
-    transition: all .25s ease;
 
     &--container {
+      display: flex;
+      flex-direction: column;
       margin: 0 auto;
       margin-bottom: 1rem;
-      display: flex;
-      flex-direction: column !important;
+      background: white;
+      border-radius: 10px;
+      padding: 1rem;
+      transition: all .25s ease;
+
+      &:hover {
+        box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .02);
+      }
     }
 
     &--form {
@@ -90,10 +96,6 @@
       text-overflow: ellipsis;
       overflow: hidden;
       text-align: center;
-    }
-
-    &:hover {
-      box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .02);
     }
   }
 

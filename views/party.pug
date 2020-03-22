@@ -35,6 +35,6 @@ section
             form(method="post" action=`/party/${party._id}/items/${item._id}?_method=DELETE`)
               button(type="submit") ❌ Supprimer l'item
       else 
-        p Aucun items pour cette événement pour le moment
+        p.newParty__items--container Aucun items pour cette événement pour le moment
 
 include ../partials/footer.pug
