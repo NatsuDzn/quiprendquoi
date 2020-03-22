@@ -6,6 +6,8 @@ if (navigator.share) {
 
     $button.addEventListener('click', share.bind(this, $shareEl));
   });
+} else {
+  $button.style.display = "none"
 }
 
 function share($shareEl) {

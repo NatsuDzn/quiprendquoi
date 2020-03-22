@@ -8,6 +8,8 @@
 
 Ouvrir `localhost:3000`
 
+<!-- ⚠️ If style.css isn't created while launching `npm run start` or `npm run sass`, launch either one of these commands and open `style.scss` and edit it and save it -->
+
 ## Améliorations apportées
 
 - Listes des items sur la page de la party/event (`app.js`, `party.pug`)

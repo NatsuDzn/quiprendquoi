@@ -11,6 +11,7 @@ if (navigator.clipboard) {
   });
 } else {
   console.log('Presse papier non supporté :(');
+  $button.style.display = "none"
 }
 
 function copyToClipboard($clipboardEl, $button) {
