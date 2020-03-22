@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build:sass && concurrently --kill-others \"npm run watch:sass\" \"npm run watchify\" \"npm run sw \" \"nodemon app.js\"",
-    "build:sass": "node-sass styles/style.scss -o public --output-style compressed",
+    "build:sass": "node-sass styles/style.scss -o public --output-style compressed && cp favicon.ico public",
     "watch:sass": "node-sass styles/style.scss public/style.css -w --output-style compressed",
     "watchify": "watchify scripts/*.js -o public/script.js -t [ babelify --presets [ @babel/preset-env babel-preset-minify ] ]",
     "sw": "watchify sw.js -o public/sw.js -t [ babelify --presets [ babel-preset-minify ] ]"
